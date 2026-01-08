@@ -6,10 +6,24 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]==0.124.0",
+    "sqlmodel>=0.0.31",
 ]
 
 [dependency-groups]
 dev = [
+    "pynvim>=0.6.0",
     "pyrefly==0.45.1",
     "ruff==0.14.8",
 ]
+
+[tool.pyrefly]
+project-includes = [
+    "src"
+]
+project-excludes = [
+    ".venv",
+    "tests",
+    "alembic"
+]
+python-platform = "linux"
+python-version = "3.13"

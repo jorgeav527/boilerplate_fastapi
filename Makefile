@@ -24,8 +24,8 @@ dev_init:
 dev_requirements:
 	$(UV) pip compile pyproject.toml -o requirements.txt
 
-run:
-	$(VENV)/bin/uvicorn app.main:app --reload
+dev_run:
+	$(VENV)/bin/uvicorn src.main:app --reload
 
 lint:
 	$(VENV)/bin/ruff check .
