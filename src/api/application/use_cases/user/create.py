@@ -15,6 +15,6 @@ class CreateUserUseCase:
             id=None,
             name=name,
             created=current_time,
-            updated=current_time,
+            updated=None,
         )
         return self.repository.create(user)

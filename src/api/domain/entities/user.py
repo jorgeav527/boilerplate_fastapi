@@ -4,7 +4,7 @@ from datetime import datetime
 
 @dataclass
 class User:
-    id: int | None
+    id: str | None
     name: str
     created: datetime
-    updated: datetime
+    updated: datetime | None
